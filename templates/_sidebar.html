@@ -1,0 +1,57 @@
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+            <a>FindFolks</a>
+        </li>
+        {% if not logged_in %}
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/login">Login</a>
+            </li>
+            <li>
+                <a href="/register">Register</a>
+            </li>
+        {% endif %}
+        {% if logged_in %}
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/filter_events">View My Events</a>
+            </li>
+            <li>
+                <a href="/browse_events">Browse Events</a>
+            </li>
+            <li>
+                <a href="/friends">Friends List</a>
+            </li>
+            <li>
+                <a href="/add_interests">Add Interests</a>
+            </li>
+            <li>
+                <a href="/create_groups">Create Groups</a>
+            </li>
+            <li>
+                <a href="/groups">Join Groups</a>
+            </li>
+{#            {% if create_event %}#}
+                <li>
+                    <a href="/create_events">Create Events</a>
+                </li>
+{#            {% endif %}#}
+            <li>
+                <a href="/rate_events">Rate Events</a>
+            </li>
+            <li>
+                <a href="/friends_events">View Friends Events</a>
+            </li>
+            <li>
+                <a href="/logout">Logout</a>
+            </li>
+        {% endif %}
+    </ul>
+</div>
+<!-- /#sidebar-wrapper -->

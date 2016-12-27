@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/simple-sidebar.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="wrapper">
+
+    {% include '_sidebar.html' %}
+
+    <!-- Make sure to keep all page content within the #page-content-wrapper div. -->
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    {% include '_flash.html' %}
+                    <h1>Add your interests!</h1> </br>
+                    <form method="POST">
+                        Category: <input type="text" name="category" maxlength="20" required/> </br>
+                        Keyword: <input type="text" name="keyword" maxlength="20" required/> </br>
+                        <input type="submit" value="Add"/>
+                    </form>
+                    <style type="text/css">
+                        table, th, td {
+                            border: 1px solid black;
+                        }
+                    </style>
+
+                    <h3>Your Interests</h3>
+
+                    <table>
+                        <th>Category</th>
+                        <th>Keyword</th>
+
+                        {% for line in interests %}
+                            <tr>
+                                <td>{{ line.category }}</td>
+                                <td>{{ line.keyword }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+
+<script src="static/js/jquery.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+</body>
+
+</html>
