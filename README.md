@@ -1,5 +1,3 @@
-FindFolks README
-
 FindFolks is a social network which allows users to organize groups of people with common interests, groups to host and announce events, and users to gather feedback on events (just to name of a few of the features).
 
 The web application was built using python and the flask framework. To run the application you'll need an IDE that supports flask (pycharm, python tools plugin for visual studio, etc). You'll also need some software package that has MySQL and a web server. WAMP/MAMP was used for this project, as it comes with those and phpMyAdmin, and its free.
