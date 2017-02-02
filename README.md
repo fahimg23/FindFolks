@@ -10,6 +10,7 @@ pip install flask </br>
 pip install pymysql</br>
 
 pymysql is needed for the app to connect to the database. Run “mysqld” in the command line to start the mysql daemon.</br>
+
 If you are unable to run mysql do the following: </br>
 Mac – Add the path to mysqld using the following: export PATH=${PATH}:/usr/local/mamp/mysql/bin/ </br>
 You will have to modify the path to match how it’s installed in your system. 
